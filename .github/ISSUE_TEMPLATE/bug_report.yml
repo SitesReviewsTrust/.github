@@ -1,0 +1,96 @@
+name: 🐞 Bug report
+description: Report something that isn't working as expected in a Sites.Reviews project.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report! 🙏
+
+        - 🔒 **Security issue?** Do **not** report it here. Follow our [Security Policy](https://github.com/SitesReviewsTrust/.github/blob/main/SECURITY.md) and use private vulnerability reporting.
+        - 🔎 Please **search [existing issues](https://github.com/search?q=org%3ASitesReviewsTrust&type=issues)** first to avoid duplicates.
+        - 📇 To dispute or correct a **specific listing or trust rating**, use [@SitesReviews_bot](https://t.me/SitesReviews_bot) instead — that's a catalog matter, not a code bug.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      description: Which part of the ecosystem is this about?
+      options:
+        - MCP server (sites-reviews-mcp)
+        - Public API / widget (sites-reviews-api)
+        - Browser extension (sites-reviews-extension)
+        - Documentation (sites-reviews-docs)
+        - Website (sites.reviews)
+        - Not sure
+    validations:
+      required: true
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you start
+      options:
+        - label: I have searched existing issues and this is not a duplicate.
+          required: true
+        - label: This is not a security vulnerability (those go through the Security Policy).
+          required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: When I do X, Y happens instead of Z.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Exact steps so we can reproduce it. Include URLs, requests, or commands where relevant.
+      placeholder: |
+        1. Go to '...'
+        2. Call '...' / click '...'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened? Include error messages, logs, or screenshots (redact any secrets).
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      description: Package version, release tag, commit SHA, or extension version.
+      placeholder: "v1.2.3 / commit abc1234"
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, runtime (Node version), browser + version, AI client (for the MCP server), etc.
+      placeholder: |
+        - OS: macOS 14.5
+        - Node: 20.11
+        - Browser: Chrome 126
+        - MCP client: Claude Desktop
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that might help — related issues, workarounds, frequency.
+    validations:
+      required: false

@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation
+    url: https://github.com/SitesReviewsTrust/sites-reviews-docs
+    about: Setup, the public API, the MCP server, the widget, and the extension — most questions are answered here.
+  - name: 💬 Questions & Discussions
+    url: https://github.com/orgs/SitesReviewsTrust/discussions
+    about: Ask "how do I…?", share ideas, and get integration help. Better than an issue for open-ended questions.
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/SitesReviewsTrust/.github/blob/main/SECURITY.md
+    about: Do NOT open a public issue. Use GitHub private vulnerability reporting (Security tab → Report a vulnerability).
+  - name: 🤖 Telegram support
+    url: https://t.me/SitesReviews_bot
+    about: Quick questions, account help, or to dispute/correct a specific listing or trust rating.
+  - name: 🌐 Website — sites.reviews
+    url: https://sites.reviews
+    about: Check any site's trust score and reviews, or run a scam/security check.

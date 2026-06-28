@@ -1,0 +1,69 @@
+name: 💡 Feature request
+description: Suggest a new feature or improvement for a Sites.Reviews project.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make Sites.Reviews better! 💙
+
+        - 🔎 Please **search [existing issues and discussions](https://github.com/search?q=org%3ASitesReviewsTrust&type=issues)** first — someone may have proposed this already.
+        - 💬 For open-ended ideas or "would you consider…?", a [Discussion](https://github.com/orgs/SitesReviewsTrust/discussions) is often a better fit than an issue.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Target component
+      description: Which part of the ecosystem would this affect?
+      options:
+        - MCP server (sites-reviews-mcp)
+        - Public API / widget (sites-reviews-api)
+        - Browser extension (sites-reviews-extension)
+        - Documentation (sites-reviews-docs)
+        - Website (sites.reviews)
+        - Cross-cutting / not sure
+    validations:
+      required: true
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you start
+      options:
+        - label: I have searched existing issues and discussions and this is not a duplicate.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the problem or limitation you're hitting. Focus on the "why" before the "what".
+      placeholder: I'm trying to … but currently I can't … because …
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe what you'd like to happen. Be as concrete as you can.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches or workarounds you've thought about, and why they fall short.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Mockups, links, examples from other tools, or anything else that helps.
+    validations:
+      required: false
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd be willing to help implement this (see CONTRIBUTING.md).
+          required: false
